@@ -1,2 +1,0 @@
-# Liedetection_tkinter
-
