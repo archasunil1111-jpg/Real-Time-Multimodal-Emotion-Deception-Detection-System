@@ -1,19 +1,11 @@
 # Adaptive Multimodal AI for Emotion Consistency & Deception Detection
 
 ##  Overview
+This project is a real-time multimodal AI system designed to analyze human behavioral patterns and detect potential inconsistencies in emotional responses.
 
-This project is a real-time AI system designed to detect suspicious or deceptive behavior using multiple signals.
+Unlike traditional single-signal systems, this project combines computer vision and physiological signals to improve robustness in behavioral interpretation.
 
-The system analyzes:
-
-* Eye blink rate
-* Eye gaze
-* Head pose
-* Shoulder movement
-* Heart rate (via Arduino)
-
-By combining these signals, the system improves reliability compared to single-method approaches.
-
+The system is designed as a prototype for intelligent behavioral analysis applications such as security screening, human-computer interaction, and assistive monitoring systems.
 ---
 
 ##  Technologies Used
