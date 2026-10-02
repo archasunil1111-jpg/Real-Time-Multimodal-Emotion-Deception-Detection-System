@@ -1,118 +1,163 @@
-# Adaptive Multimodal AI for Emotion Consistency & Deception Detection
+# Real-Time Multimodal Emotion & Behavioral Consistency System
+
+A real-time computer-vision and physiological-signal prototype that analyzes behavioral indicators and identifies patterns that may be associated with inconsistent responses.
+
+The system combines multiple signals, including facial landmarks, eye behavior, head pose, shoulder movement, and heart-rate data, to support multimodal behavioral analysis.
+
+> **Important:** This project is a prototype for behavioral analysis. Its output should not be interpreted as proof that a person is deceptive or truthful.
 
 ## Overview
 
-This project is a real-time multimodal AI system designed to analyze human behavioral patterns and detect potential inconsistencies in emotional responses.
+Single-signal behavioral analysis can be affected by incomplete or unreliable observations. This project explores a multimodal approach by combining several behavioral and physiological indicators.
 
-Unlike traditional single-signal systems, this project combines computer vision and physiological signals to improve robustness in behavioral interpretation.
+The system performs real-time analysis and applies rule-based consistency checks across multiple signals.
 
-The system is designed as a prototype for intelligent behavioral analysis applications such as security screening, human-computer interaction, and assistive monitoring systems.
+## Features
 
----
+### Computer Vision
 
-## Problem Statement
+- Eye blink-rate detection
+- Eye-gaze tracking
+- Head-pose estimation
+- Shoulder-movement analysis
+- Facial landmark extraction using MediaPipe
 
-Single-source emotion detection systems (facial expression or physiological signals alone) often fail in real-world scenarios due to incomplete or unreliable data.
+### Physiological Signal
 
-This project addresses this limitation by:
+- Heart-rate monitoring using an Arduino-connected sensor
+- Baseline calibration for personalized thresholds
 
-* Combining multiple behavioral indicators
-* Performing real-time analysis
-* Detecting inconsistencies across multiple modalities
+### Multimodal Analysis
 
----
+- Combines behavioral and physiological signals
+- Performs real-time signal evaluation
+- Identifies patterns that may indicate behavioral inconsistency
+- Displays analysis results through a Tkinter dashboard
 
-## System Features
+## Technologies
 
-* Eye blink rate detection
-* Eye gaze tracking
-* Head pose estimation
-* Shoulder movement analysis
-* Heart rate monitoring via Arduino sensor
-* Baseline calibration for personalized analysis
-* Real-time behavioral consistency evaluation
-* Live visualization dashboard using Tkinter
-
----
-
-## Technologies Used
-
-* Python
-* OpenCV
-* MediaPipe
-* Tkinter
-* Arduino (C++)
-* SQLite
-* NumPy (if applicable)
-
----
+- Python
+- OpenCV
+- MediaPipe
+- Tkinter
+- Arduino / C++
+- SQLite
+- NumPy
 
 ## System Architecture
 
-Webcam Input → OpenCV → MediaPipe
-→ Facial Feature Extraction
-→ Behavioral Signal Analysis
-→ Heart Rate Sensor (Arduino Input)
-→ Multimodal Fusion Engine
-→ Deception / Consistency Output
-→ Tkinter Dashboard Visualization
-
----
+```text id="k4l0xm"
+Webcam Input
+      ↓
+OpenCV
+      ↓
+MediaPipe
+      ↓
+Facial & Body Feature Extraction
+      ↓
+Behavioral Signal Analysis
+      ↓
+Heart-Rate Sensor
+      ↓
+Multimodal Signal Evaluation
+      ↓
+Rule-Based Consistency Analysis
+      ↓
+Tkinter Dashboard
+```
 
 ## How It Works
 
-1. The system captures live video using a webcam
-2. Facial landmarks are extracted using MediaPipe
-3. Eye blink rate, gaze direction, head pose, and shoulder movement are computed
-4. Heart rate data is collected from an Arduino sensor
-5. A baseline calibration phase establishes user-specific thresholds
-6. All signals are fused to detect behavioral inconsistencies
-7. Results are displayed in a real-time dashboard
-
----
+1. The system captures live video through a webcam.
+2. MediaPipe extracts facial and body landmarks.
+3. Behavioral indicators such as blink rate, gaze direction, head pose, and shoulder movement are calculated.
+4. Heart-rate information is collected through an Arduino-connected sensor.
+5. A calibration phase establishes baseline values and thresholds.
+6. Multiple signals are evaluated together using rule-based consistency checks.
+7. The results are displayed through a real-time Tkinter dashboard.
 
 ## Project Structure
 
-```
-src/           Main Python application
-hardware/      Arduino code (C++)
-data/          Calibration data and stored parameters
-screenshots/   UI and system output images
-```
-
----
-
-## How to Run
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-python src/main.py
+```text id="qknb4r"
+Real-Time-Multimodal-Emotion-Deception-Detection-System/
+│
+├── src/
+│   └── main.py
+│
+├── hardware/
+│   └── Hardware.ino
+│
+├── data/
+│   └── head_calibration.json
+│
+├── screenshots/
+│
+├── .gitattributes
+├── .gitignore
+├── requirements.txt
+└── README.md
 ```
 
 ## Screenshots
 
 ### Real-Time Analysis Dashboard
-![Dashboard](screenshots/output.png)
+
+![Real-Time Analysis Dashboard](screenshots/dashboard.png)
 
 ### Hardware Circuit Diagram
-![Circuit Diagram](screenshots/pulse_sensor_cd.jpg)
 
----
+![Hardware Circuit Diagram](screenshots/circuit-diagram.png)
 
-##  Future Scope
+## How to Run
 
-* Deep learning integration
-* Speech analysis
-* Web/mobile deployment
-* Improved accuracy using large datasets
+### 1. Install dependencies
 
----
+```bash
+pip install -r requirements.txt
+```
 
+### 2. Run the application
 
+```bash
+python src/main.py
+```
+
+The system requires the appropriate webcam and Arduino-connected sensor hardware for the corresponding real-time features.
+
+## Applications Explored
+
+This prototype explores possible applications of multimodal behavioral analysis, including:
+
+- Human-computer interaction
+- Experimental behavioral analysis
+- Assistive monitoring prototypes
+- Computer-vision research
+
+These are areas of exploration rather than claims of production readiness.
+
+## Limitations
+
+- The system is a prototype and not a validated deception-detection system.
+- Behavioral signals can have many causes unrelated to deception.
+- Rule-based thresholds may not generalize across users or environments.
+- Physiological measurements can vary because of movement, stress, sensor placement, and other factors.
+- Reliable real-world evaluation would require larger datasets and controlled validation.
+
+## Future Improvements
+
+- Explore machine-learning or deep-learning approaches
+- Add speech and audio features
+- Improve multimodal signal fusion
+- Evaluate performance using larger datasets
+- Improve calibration and threshold selection
+- Explore web or mobile deployment
+
+## Project Purpose
+
+This project demonstrates how **computer vision, physiological sensing, real-time signal processing, and multimodal rule-based analysis** can be combined in an experimental behavioral-analysis system.
+
+## Author
+
+**Archa Sunil**
+
+GitHub: [archasunil1111-jpg](https://github.com/archasunil1111-jpg)
