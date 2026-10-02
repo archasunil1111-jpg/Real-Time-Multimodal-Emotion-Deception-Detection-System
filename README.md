@@ -46,7 +46,7 @@ The system performs real-time analysis and applies rule-based consistency checks
 
 ## System Architecture
 
-```text id="k4l0xm"
+```text
 Webcam Input
       ↓
 OpenCV
@@ -78,7 +78,7 @@ Tkinter Dashboard
 
 ## Project Structure
 
-```text id="qknb4r"
+```text
 Real-Time-Multimodal-Emotion-Deception-Detection-System/
 │
 ├── src/
@@ -91,6 +91,8 @@ Real-Time-Multimodal-Emotion-Deception-Detection-System/
 │   └── head_calibration.json
 │
 ├── screenshots/
+│   ├── output.png
+│   └── pulse_sensor_cd.jpg
 │
 ├── .gitattributes
 ├── .gitignore
@@ -100,13 +102,13 @@ Real-Time-Multimodal-Emotion-Deception-Detection-System/
 
 ## Screenshots
 
-### Real-Time Analysis Dashboard
+### Real-Time Analysis Output
 
-![Real-Time Analysis Dashboard](screenshots/dashboard.png)
+![Real-Time Analysis Output](screenshots/output.png)
 
-### Hardware Circuit Diagram
+### Pulse Sensor / Hardware
 
-![Hardware Circuit Diagram](screenshots/circuit-diagram.png)
+![Pulse Sensor Hardware](screenshots/pulse_sensor_cd.jpg)
 
 ## How to Run
 
